@@ -11,26 +11,33 @@
 - push 권한이 없는 프로젝트에 기여할 때 내가 작성한 코드를 프로젝트에 합치고 싶을 때 사용
 
 1-1. 다른 사람의 원격레파지토리에서 folk로 내 레파지토리에 가져오기 (다른사람 원격 레파지토리 -> 내 원격레파지토리) 
+
 1-2. 내 원격레파지토리 -> 내 로컬레파지토리 클론할 폴더에서 git bash 로 클론함 
 git clone 내원격레파지토리주소 //내 원격레파지토리 클론 클론한 폴더 안에 들어가서 git bash로 명령어 치기 
 git remote add 별명 다른사람원본원격레파지토리주소 //나중에 git pull 하기 위해서 연결함 
 git remote -v //현재 연결되어 있는 원격 저장소 확인 : //내원격레파지토리-로컬, 다른사람레파지토리-로컬 연결 확인 
 git remote remove 별명 //연결되어 있는 로컬레파지토리와 원격레파지토리와 연결 끊기 
+
 1-3. 브랜치를 만들어서 작업 
 git branch 브랜치이름 // 브랜치이름으로 브랜치 생성 
 git checkout 브랜치이름 //브랜치이름으로 이동 
 git branch //브랜치 리스트 
+
 1-4. 코드 작업 후 내 원격레파지토리에 git push하기 
 git add . 
 git commit -m "third commit" //변경사항 히스토리 만들기 
 git push origin 브랜치이름 // 내원격레파지토리의 브랜치에 변경사항 push 
+
 1-5. 내 원격레파지토리 -> 다른사람원격레파지토리에 Full Request 하기 
 내 원격레파지토리에서 상단에 Compare&pull request 버튼 누르고 어디서 어디로 full request를 할 것인지 확인하고 requeset 하기 
+
 1-6. 다른사람은 깃허브에서 Full Request 확인 다른 사람의 원격레파지토리에서 full request 온 것을 확인하고 merge할 것인지 거절할 것인지 확인하면 됨. 
+
 1-7. 업데이트 된 다른사람 원격레파지토리 pull 하기
+![pic2](/img/pic2.jpg)
 
 
-
+![pic1](/img/pic1.jpg)
 
 
 2. HEAD 
