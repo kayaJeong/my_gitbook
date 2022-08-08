@@ -6,6 +6,7 @@
 * [MarkDown](Markdown.md)
 * [AWS SWAP](Swap.md)
 * [VI Command](ViCommand.md)
+* [YUM](YUM.md)
 
 
 
