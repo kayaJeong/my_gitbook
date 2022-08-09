@@ -76,9 +76,9 @@ cd /etc/yum.repos.d/
 ```
 
 3. Yum Repository 추가
+
 ```plaintext
 vi /etc/yum.repos.d/레포지토리이름.repo  
-
 
 <필드설명>
 name=저장소 표시 이름
