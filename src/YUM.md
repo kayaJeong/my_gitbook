@@ -2,7 +2,7 @@
 <br>
 
 ### 1. YUM 이란?
-- Yellowdog Updater Modified 명령어는 CentOS에서 패키지 관리를 하는 명령어
+- Yellowdog Updater Modified 명령어는 CentOS에서 패키지 관리를 하는 패키지 관리 도구 
 - /etc/yum.conf에 설정 내용,  /etc/yum.repos.d/ 디렉토리에 저장된 저장소 파일에 지정된 서버로부터 업데이트된 패키지들을 검사하고 다운로드하여 설치함
 - 설치, 업데이트, 삭제 시 의존성을 검사하여 관련된 패키지를 설치, 업데이트, 삭제를 함께 진행함 
 
@@ -56,3 +56,55 @@ yum remove 패키지명
 ```plaintext
 yum clean all    
 ```
+
+
+### 3. Yum  Repository
+- Yum을 통해 Package 설치 시 활동화된 Yum Repositor에서 다운로드해서 설치해 Package가 Repository에 있어야함 
+- Defaulf Repository 외 EPEL(Extra Package for Enterprise Linux), REMI 등 다른 Repository추가 해 원하는 Package 및 최신 Package 설치 가능 
+
+
+### 4. Yum Repository 확인
+
+1. 활성화된 Yum Repository 확인
+```plaintext
+yum repolist    
+```
+
+2. Yum Repository 위치
+```plaintext
+cd /etc/yum.repos.d/
+```
+
+3. Yum Repository 추가
+```plaintext
+vi /etc/yum.repos.d/레포지토리이름.repo  
+
+
+<필드설명>
+name=저장소 표시 이름
+baseurl=저장소 주소
+enabled=활성화 여부 (0 or 1)
+gpgcheck=gpg 서명키 사용 여부 (0 or 1)
+gpgkey=서명키 사용 시 서명키 주소
+```
+
+4. Yum Repository 삭제
+```plaintext
+<레포지토리삭제>
+rm -rf /etc/yum.repos.d/레포지토리이름.repo
+
+<캐시파일 삭제>
+rm -rf /var/cache/yum/x86_64
+
+<헤더, 패지키, 메타데이터 삭제>
+yum clean headers
+yum clean packages
+yum clean metadata
+```
+
+
+----------------------------------------------------------
+참고
+
+https://kim-dragon.tistory.com/232
+
