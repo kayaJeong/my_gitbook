@@ -26,7 +26,6 @@ yum install --nogpgcheck rpm패키지.rpm      : CentOS7에서 인증되지 않�
 yum check-update
 ```
 
-
 3. 업데이트 : 설치 되어 있는 패키지를 업데이트 하고 싶은 경우
 ```plaintext
 yum update 패키지명
@@ -56,7 +55,6 @@ yum remove 패키지명
 ```plaintext
 yum clean all    
 ```
-
 
 ### 3. Yum  Repository
 - Yum을 통해 Package 설치 시 활동화된 Yum Repositor에서 다운로드해서 설치해 Package가 Repository에 있어야함 
@@ -89,6 +87,7 @@ gpgkey=서명키 사용 시 서명키 주소
 ```
 
 4. Yum Repository 삭제
+
 ```plaintext
 <레포지토리삭제>
 rm -rf /etc/yum.repos.d/레포지토리이름.repo

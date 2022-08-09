@@ -233,8 +233,6 @@ yum install --nogpgcheck rpm&#xD328;&#xD0A4;&#xC9C0;.rpm      : CentOS7&#xC5D0;&
 <pre><code class="lang-plaintext">yum check-update
 </code></pre>
 </li>
-</ol>
-<ol>
 <li><p>&#xC5C5;&#xB370;&#xC774;&#xD2B8; : &#xC124;&#xCE58; &#xB418;&#xC5B4; &#xC788;&#xB294; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xD558;&#xACE0; &#xC2F6;&#xC740; &#xACBD;&#xC6B0;</p>
 <pre><code class="lang-plaintext">yum update &#xD328;&#xD0A4;&#xC9C0;&#xBA85;
 yum update       : &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xAC00;&#xB2A5;&#xD55C; &#xBAA8;&#xB4E0; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD568;
@@ -289,18 +287,19 @@ gpgcheck=gpg &#xC11C;&#xBA85;&#xD0A4; &#xC0AC;&#xC6A9; &#xC5EC;&#xBD80; (0 or 1)
 gpgkey=&#xC11C;&#xBA85;&#xD0A4; &#xC0AC;&#xC6A9; &#xC2DC; &#xC11C;&#xBA85;&#xD0A4; &#xC8FC;&#xC18C;
 </code></pre>
 <ol>
-<li>Yum Repository &#xC0AD;&#xC81C;
-```plaintext
-&lt;&#xB808;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC0AD;&#xC81C;&gt;
-rm -rf /etc/yum.repos.d/&#xB808;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC774;&#xB984;.repo</li>
+<li>Yum Repository &#xC0AD;&#xC81C;</li>
 </ol>
-<p>&lt;&#xCE90;&#xC2DC;&#xD30C;&#xC77C; &#xC0AD;&#xC81C;&gt;
-rm -rf /var/cache/yum/x86_64</p>
-<p>&lt;&#xD5E4;&#xB354;, &#xD328;&#xC9C0;&#xD0A4;, &#xBA54;&#xD0C0;&#xB370;&#xC774;&#xD130; &#xC0AD;&#xC81C;&gt;
+<pre><code class="lang-plaintext">&lt;&#xB808;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC0AD;&#xC81C;&gt;
+rm -rf /etc/yum.repos.d/&#xB808;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC774;&#xB984;.repo
+
+&lt;&#xCE90;&#xC2DC;&#xD30C;&#xC77C; &#xC0AD;&#xC81C;&gt;
+rm -rf /var/cache/yum/x86_64
+
+&lt;&#xD5E4;&#xB354;, &#xD328;&#xC9C0;&#xD0A4;, &#xBA54;&#xD0C0;&#xB370;&#xC774;&#xD130; &#xC0AD;&#xC81C;&gt;
 yum clean headers
 yum clean packages
 yum clean metadata
-```</p>
+</code></pre>
 <hr>
 <p>&#xCC38;&#xACE0;</p>
 <p><a href="https://kim-dragon.tistory.com/232" target="_blank">https://kim-dragon.tistory.com/232</a></p>
@@ -343,7 +342,7 @@ yum clean metadata
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"YUM","level":"1.6","depth":1,"previous":{"title":"VI Command","level":"1.5","depth":1,"path":"ViCommand.md","ref":"ViCommand.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"YUM.md","mtime":"2022-08-09T01:57:42.313Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-09T01:57:51.056Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"YUM","level":"1.6","depth":1,"previous":{"title":"VI Command","level":"1.5","depth":1,"path":"ViCommand.md","ref":"ViCommand.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"YUM.md","mtime":"2022-08-09T09:21:22.141Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-09T09:21:55.443Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
