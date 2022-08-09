@@ -89,6 +89,7 @@ gpgkey=서명키 사용 시 서명키 주소
 4. Yum Repository 삭제
 
 ```plaintext
+
 <레포지토리삭제>
 rm -rf /etc/yum.repos.d/레포지토리이름.repo
 
@@ -99,6 +100,7 @@ rm -rf /var/cache/yum/x86_64
 yum clean headers
 yum clean packages
 yum clean metadata
+
 ```
 
 
