@@ -33,7 +33,7 @@ sudo yum -y install httpd
 #### 1-5. 실행 및 상태 확인 
 
 ```plaintext
-sudo systemctl starthttpd
+sudo systemctl start httpd
 
 sudo systemctl status httpd
 ```
@@ -76,33 +76,6 @@ sudo yum -y install java-1.8.0-openjdk-devel.x86_64
 
 ```
 
-```plaintext
-환경변수 설정
-
-which java
-
-readlink -f /usr/bin/java
-
--------------------------
-/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.amzn2.0.2.x86_64/jre/bin/java
--------------------------
-
-
-sudo vi /etc/profile
-
---------------------------
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.332.b09-1.amzn2.0.2.x86_64/jre/bin/java
-export PATH=$PATH:$JAVA_HOME/bin
-export CLASSPATH=$JAVA_HOME/jre/lib:$JAVA_HOME/lib/tools.jar
-
-:wq
-----------------------------
-
-source /etc/profile
-
-echo $JAVA_HOME
-```
-
 
 
 ### 5. resin 4.0.63 설치 
@@ -116,11 +89,21 @@ yum install https://caucho.com/download/rpm-6.8/4.0.63/x86_64/resin-4.0.63-1.x86
 
 
 
+### 6. 확인
+```plaintext
+yum repolist //현재 틍록된 레포리스트 출력
+yum list installed //설치된 전체 패키지 
+
+```
 
 
 
 
 
+
+-----------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
 
@@ -147,12 +130,6 @@ make && make install
 ```
 
 
-### 6. 확인
-```plaintext
-yum repolist //현재 틍록된 레포리스트 출력
-yum list installed //설치된 전체 패키지 
-
-```
 
 
 
