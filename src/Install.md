@@ -2,10 +2,14 @@
 
 ### 1. yum 리포지토리 설치 확인 
 
-#### 1-1. 설치되어 있는 yum 리포지토리 조회 
+#### 1-1. 설치되어 있는 yum 리포지토리 조회 및 업데이트
 
 ```plaintext
 yum repolist all 
+
+
+yum -y update
+
 ```
 
 #### 1-2. yum-config-manager 명령을 사용해 리포지토리 추가
@@ -64,7 +68,7 @@ sudo yum -y install php.x86_64
 
 ```
 
-### 4. JDK 설치 및 환경변수 설정 
+### 4. JDK 설치
 
 ```plaintext
 
@@ -106,30 +110,6 @@ yum list installed //설치된 전체 패키지
 -----------------------------------------------------------------------------------
 
 -----------------------------------------------------------------------------------
-
-
-```plaintext
-다운로드. 패키지 설치
-wget "https://caucho.com/download/resin-4.0.66.tar.gz"
-
-
-tar파일 풀기 및 설치 
-tar xzvf resin-4.0.66.tar.gz
-
-cd resin-4.0.66
-
-configure에서 no acceptable C compiler found in $PATH 오류
-컴파일러를 찾지못해 생기는 에러 -> 
-rpm -qa|grep gcc
-#yum -y install gcc 
-
-./configure --prefix=/data/resin-4.0.66
-
-make && make install
-
-```
-
-
 
 
 
