@@ -295,9 +295,23 @@ source /etc/profile
 echo $JAVA_HOME
 </code></pre>
 <h3 id="5-resin-&#xC124;&#xCE58;">5. resin &#xC124;&#xCE58;</h3>
-<pre><code class="lang-plaintext">rpm --import http://caucho.com/download/rpm/RPM-GPG-KEY-caucho
+<pre><code class="lang-plaintext">&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;. &#xD328;&#xD0A4;&#xC9C0; &#xC124;&#xCE58;
+wget &quot;https://caucho.com/download/resin-4.0.66.tar.gz&quot;
 
-yum install http://caucho.com/download/rpm/4.0.30/x86_64/resin-pro-4.0.30-1.x86_64.rpm
+
+tar&#xD30C;&#xC77C; &#xD480;&#xAE30; &#xBC0F; &#xC124;&#xCE58; 
+tar xzvf resin-4.0.66.tar.gz
+
+cd resin-4.0.66
+
+configure&#xC5D0;&#xC11C; no acceptable C compiler found in $PATH &#xC624;&#xB958;
+&#xCEF4;&#xD30C;&#xC77C;&#xB7EC;&#xB97C; &#xCC3E;&#xC9C0;&#xBABB;&#xD574; &#xC0DD;&#xAE30;&#xB294; &#xC5D0;&#xB7EC; -&gt; 
+rpm -qa|grep gcc
+#yum -y install gcc 
+
+./configure --prefix=/data/resin-4.0.66
+
+make &amp;&amp; make install
 </code></pre>
 <h3 id="6-&#xD655;&#xC778;">6. &#xD655;&#xC778;</h3>
 <pre><code class="lang-plaintext">yum repolist //&#xD604;&#xC7AC; &#xD2CD;&#xB85D;&#xB41C; &#xB808;&#xD3EC;&#xB9AC;&#xC2A4;&#xD2B8; &#xCD9C;&#xB825;
@@ -361,7 +375,7 @@ sudo passwd root
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Install","level":"1.7","depth":1,"previous":{"title":"YUM","level":"1.6","depth":1,"path":"YUM.md","ref":"YUM.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Install.md","mtime":"2022-08-14T09:00:03.311Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-14T09:00:28.988Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Install","level":"1.7","depth":1,"previous":{"title":"YUM","level":"1.6","depth":1,"path":"YUM.md","ref":"YUM.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Install.md","mtime":"2022-08-16T03:39:37.392Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-16T03:39:44.149Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

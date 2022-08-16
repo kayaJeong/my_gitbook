@@ -104,9 +104,24 @@ echo $JAVA_HOME
 ### 5. resin 설치 
 
 ```plaintext
-rpm --import http://caucho.com/download/rpm/RPM-GPG-KEY-caucho
+다운로드. 패키지 설치
+wget "https://caucho.com/download/resin-4.0.66.tar.gz"
 
-yum install http://caucho.com/download/rpm/4.0.30/x86_64/resin-pro-4.0.30-1.x86_64.rpm
+
+tar파일 풀기 및 설치 
+tar xzvf resin-4.0.66.tar.gz
+
+cd resin-4.0.66
+
+configure에서 no acceptable C compiler found in $PATH 오류
+컴파일러를 찾지못해 생기는 에러 -> 
+rpm -qa|grep gcc
+#yum -y install gcc 
+
+./configure --prefix=/data/resin-4.0.66
+
+make && make install
+
 ```
 
 
