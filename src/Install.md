@@ -17,7 +17,11 @@ sudo yum-config-manager --add-repo https://www.example.com/repository.repo
 #### 1-3. /etc/yum.repos.d  에 yum 리포지토리 활성화 및 epel 설치 
 
 ```plaintext
-sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+cat /etc/os-release
+
+sudo amazon-linux-extras install epel -y
+
 ```
 
 #### 1-4. httpd설치
@@ -101,7 +105,25 @@ echo $JAVA_HOME
 
 
 
-### 5. resin 설치 
+### 5. resin 4.0.63 설치 
+
+
+```plaintext
+rpm --import http://caucho.com/download/rpm/RPM-GPG-KEY-caucho
+
+yum install https://caucho.com/download/rpm-6.8/4.0.63/x86_64/resin-4.0.63-1.x86_64.rpm
+```
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------
+
 
 ```plaintext
 다운로드. 패키지 설치
@@ -161,3 +183,12 @@ su - 입력 시 해당 오류 발생
 sudo passwd root 
 
 ```
+
+
+
+참고..
+
+https://aws.amazon.com/ko/premiumsupport/knowledge-center/ec2-enable-epel/
+
+https://www.caucho.com/resin-4.0/admin/starting-resin.xtp
+
