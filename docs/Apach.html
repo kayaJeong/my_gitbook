@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · GitBook</title>
+        <title>Apach · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="AboutGit.html" />
     
+    <link rel="prev" href="Install.html" />
     
 
     </head>
@@ -87,7 +87,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -178,7 +178,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="Apach.html">
+        <li class="chapter active" data-level="1.8" data-path="Apach.html">
             
                 <a href="Apach.html">
             
@@ -221,7 +221,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >Apach</a>
     </h1>
 </div>
 
@@ -236,8 +236,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
-<p>Welcome to Kaya&apos;s Blog :-) </p>
+                                <h1 id="apach-&#xC124;&#xC815;">Apach &#xC124;&#xC815;</h1>
+<p><br></p>
+<h3 id="1-etchttpdconfhttpdconf">1. /etc/httpd/conf/httpd.conf</h3>
+<pre><code class="lang-plaintext">$ vi /etc/httpd
+$ vi /etc/httpd/conf/httpd.conf
+</code></pre>
+<pre><code class="lang-plaintext">
+1. ServerRoot : 
+    - &#xC544;&#xD30C;&#xCE58;&#xC758; &#xAE30;&#xBCF8; &#xB8E8;&#xD2B8; &#xACBD;&#xB85C;.
+    - &#xC808;&#xB300; &#xACBD;&#xB85C;&#xB85C; &#xC124;&#xC815; 
+    - &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xACBD;&#xB85C; &#xB05D;&#xC5D0; / &#xB123;&#xC9C0; &#xB9D0; &#xAC83;
+    - &#xC6F9; &#xC11C;&#xBC84;&#xC5D0; &#xAD00;&#xB828;&#xB41C; &#xD658;&#xACBD;&#xC124;&#xC815; &#xD30C;&#xC77C;, &#xC5D0;&#xB7EC;, &#xB85C;&#xACE0; &#xD30C;&#xC77C;&#xB4E4;&#xC774; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC704;&#xCE58; &#xC9C0;&#xC815;
+
+ServerRoot &quot;/etc/httpd&quot;
+
+2. Listen : 
+    - &#xC544;&#xD30C;&#xCE58;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xB3D9;&#xC548; &#xC218;&#xC2E0;&#xD560; &#xD3EC;&#xD2B8; &#xBC88;&#xD638; &#xC9C0;&#xC815;
+    - &#xC544;&#xD30C;&#xCE58;&#xC640; &#xD2B9;&#xC815; IP &#xC8FC;&#xC18C;&#xB97C; &#xC5F0;&#xACB0; or &#xC544;&#xD30C;&#xCE58;&#xC640; &#xD2B9;&#xC815; &#xD3EC;&#xD2B8;&#xB4E4;&#xC744; &#xC5F0;&#xACB0;
+    - &#xBBF8; &#xC9C0;&#xC815;&#xC2DC; &#xC544;&#xD30C;&#xCE58; &#xC2E4;&#xD589; &#xC548; &#xB428;
+    - 443&#xD3EC;&#xD2B8;(SSL)&#xB294; httpd-ssl.conf &#xD30C;&#xC77C;&#xC5D0;&#xC11C; &#xB530;&#xB85C; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD568; 
+#Listen 12.34.56.78:80
+
+
+Listen 80
+
+
+3. Include : 
+    - LoadModule &#xB77C;&#xC778;&#xC5D0; DSO &#xB85C; &#xAD6C;&#xCD95;&#xB41C; &#xBAA8;&#xB4C8;&#xC758; &#xAE30;&#xB2A5;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xC120;&#xC5B8;&#xB418;&#xC5B4;&#xC57C; &#xD568;
+    - http.conf &#xD30C;&#xC77C;&#xC5D0; &#xB2E4;&#xB978; &#xC124;&#xC815; &#xD30C;&#xC77C;&#xC744; &#xAC00;&#xC838;&#xC624;&#xAE30; &#xC704;&#xD574;&#xC11C; Include &#xC0AC;&#xC6A9;
+
+# Example:
+# LoadModule foo_module modules/mod_foo.so
+
+Include conf.modules.d/*.conf
+
+
+4. User / Group : 
+    - &#xC6F9; &#xC11C;&#xBC84; &#xC2E4;&#xD589;&#xD560; &#xB54C; &#xC18C;&#xC720;&#xAD8C;&#xC744; &#xAC16;&#xAC8C;&#xB418;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xC640; &#xADF8;&#xB8F9;&#xBA85; &#xC9C0;&#xC815; 
+
+User apache
+</code></pre>
+<p><br></p>
+<h3 id="2-virtualhost">2. VirtualHost</h3>
+<pre><code>- &#xD55C; &#xC11C;&#xBC84;&#xC5D0; &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xD638;&#xC2A4;&#xD305;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;
+</code></pre><hr>
+<p>DSO (Dynamic Shared Objects) </p>
 
                                 
                                 </section>
@@ -265,10 +309,10 @@
 
             
                 
-                
-                <a href="AboutGit.html" class="navigation navigation-next navigation-unique" aria-label="Next page: AboutGit">
-                    <i class="fa fa-angle-right"></i>
+                <a href="Install.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Install">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -277,7 +321,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"AboutGit","level":"1.2","depth":1,"path":"AboutGit.md","ref":"AboutGit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2022-07-29T14:42:57.488Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-17T05:12:56.452Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Apach","level":"1.8","depth":1,"previous":{"title":"Install","level":"1.7","depth":1,"path":"Install.md","ref":"Install.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Apach.md","mtime":"2022-08-17T05:12:28.010Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-17T05:12:56.452Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
