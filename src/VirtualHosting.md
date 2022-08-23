@@ -52,5 +52,5 @@ aws퍼블릭IPv4주소 vhosttest.com
 
 
 #### 2-4. 로컬 host파일의 aws퍼블릭IPv4주소 or vhosttest.com 를 입력하면 index.html 뜬다! 
-![버추얼호스팅](docs/img/virtualhosting.PNG)
+![버추얼호스팅](/img/virtualhosting.PNG)
 
