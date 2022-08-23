@@ -12,7 +12,7 @@
 * [VI Command](ViCommand.md)
 * [YUM](YUM.md)
 * [Install](Install.md)
-* [Apach](Apach.md)
+* [httpd.conf](Apach.md)
 * [Virtual Hosting](VirtualHosting.md)
 
 

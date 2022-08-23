@@ -197,7 +197,7 @@
                 <a href="Apach.html">
             
                     
-                    Apach
+                    httpd.conf
             
                 </a>
             
@@ -265,14 +265,39 @@
                                 
                                 <h1 id="virtualhost">VirtualHost</h1>
 <p><br></p>
-<h3 id="2-virtualhost">2. VirtualHost</h3>
+<h3 id="1-virtualhost">1. VirtualHost</h3>
 <pre><code>- &#xD55C; &#xC11C;&#xBC84;&#xC5D0; &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xD638;&#xC2A4;&#xD305;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;
-</code></pre><h4 id="2-1-&#xC124;&#xC815;-&#xBC29;&#xBC95;">2-1. &#xC124;&#xC815; &#xBC29;&#xBC95;</h4>
-<pre><code>- /etc/httpd/conf/httpd.conf &#xD30C;&#xC77C;&#xC5D0; &#xC124;&#xC815; Virtual host &#xC124;&#xC815;&#xD30C;&#xC77C; &#xD3EC;&#xD568; 
-- /etc/httpd/conf/httpd.conf &#xD30C;&#xC77C;&#xC5D0; &#xD0DC;&#xADF8;&#xB97C; &#xB123;&#xC5B4; &#xC9C1;&#xC811; &#xC815;&#xC758; 
-</code></pre><pre><code class="lang-plaintext">
+</code></pre><h4 id="2-&#xC124;&#xC815;-&#xBC29;&#xBC95;2&#xAC00;&#xC9C0;">2. &#xC124;&#xC815; &#xBC29;&#xBC95;(2&#xAC00;&#xC9C0;)</h4>
+<pre><code>-  /etc/httpd/conf.d &#xB85C; &#xC774;&#xB3D9; &#xD6C4; vhosts.conf &#xD30C;&#xC77C;&#xC5D0; &#xC815;&#xC758; 
+-  /etc/httpd/conf/httpd.conf &#xD30C;&#xC77C;&#xC5D0;  VirtualHost &#xD0DC;&#xADF8;&#xB97C; &#xB123;&#xC5B4; &#xC9C1;&#xC811; &#xC815;&#xC758; 
+</code></pre><h4 id="2-1--etchttpdconfhttpdconf-&#xC5D0;-virtualhost-&#xD0DC;&#xADF8;-&#xC0BD;&#xC785;">2-1.  /etc/httpd/conf/httpd.conf &#xC5D0; VirtualHost &#xD0DC;&#xADF8; &#xC0BD;&#xC785;</h4>
+<pre><code class="lang-plaintext">&lt;VirtualHost *:80&gt;
 
+  ServerName vhosttest.com
+  DocumentRoot /var/www/html/vhosttest.com
+
+  &lt;Directory /var/www/html/vhosttest.com&gt;
+    AllowOverride All
+  &lt;/Directory&gt;
+
+&lt;/VirtualHost&gt;
 </code></pre>
+<h4 id="2-2-&#xC9C0;&#xC815;&#xD55C;-documentroot-&#xACBD;&#xB85C;-&#xC774;&#xB3D9;---&#xB514;&#xB809;&#xD1A0;&#xB9AC;-&#xC0DD;&#xC131;---html-&#xD30C;&#xC77C;-&#xC0DD;&#xC131;varwwwhtmlvhosttestcomindexhtml---&#xC544;&#xD30C;&#xCE58;-&#xC7AC;&#xC2DC;&#xC791;">2-2. &#xC9C0;&#xC815;&#xD55C; DocumentRoot &#xACBD;&#xB85C; &#xC774;&#xB3D9; -&gt; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC0DD;&#xC131; -&gt; html &#xD30C;&#xC77C; &#xC0DD;&#xC131;(/var/www/html/vhosttest.com/index.html) -&gt; &#xC544;&#xD30C;&#xCE58; &#xC7AC;&#xC2DC;&#xC791;</h4>
+<pre><code class="lang-plaintext">
+cd /var/www/html/
+
+mkdir vhosttest.com
+
+vi index.html 
+
+service httpd restart
+</code></pre>
+<h4 id="2-3-&#xB85C;&#xCEEC;&#xC5D0;&#xC11C;-&#xD638;&#xC2A4;&#xD2B8;-&#xD30C;&#xC77C;-&#xC218;&#xC815;cwindowssystem32driversetchosts">2-3. &#xB85C;&#xCEEC;&#xC5D0;&#xC11C; &#xD638;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C; &#xC218;&#xC815;(C:\Windows\System32\drivers\etc\hosts)</h4>
+<p>&#xD558;&#xC704; &#xB0B4;&#xC6A9; &#xCD94;&#xAC00;</p>
+<pre><code class="lang-plaintext">aws&#xD37C;&#xBE14;&#xB9AD;IPv4&#xC8FC;&#xC18C; vhosttest.com
+</code></pre>
+<h4 id="2-4-&#xB85C;&#xCEEC;-host&#xD30C;&#xC77C;&#xC758;-aws&#xD37C;&#xBE14;&#xB9AD;ipv4&#xC8FC;&#xC18C;-or-vhosttestcom-&#xB97C;-&#xC785;&#xB825;&#xD558;&#xBA74;-indexhtml-&#xB72C;&#xB2E4;">2-4. &#xB85C;&#xCEEC; host&#xD30C;&#xC77C;&#xC758; aws&#xD37C;&#xBE14;&#xB9AD;IPv4&#xC8FC;&#xC18C; or vhosttest.com &#xB97C; &#xC785;&#xB825;&#xD558;&#xBA74; index.html &#xB72C;&#xB2E4;!</h4>
+<p><img src="src/img/virtualhosting.PNG" alt="&#xBC84;&#xCD94;&#xC5BC;&#xD638;&#xC2A4;&#xD305;"></p>
 
                                 
                                 </section>
@@ -300,7 +325,7 @@
 
             
                 
-                <a href="Apach.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Apach">
+                <a href="Apach.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: httpd.conf">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -312,7 +337,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Virtual Hosting","level":"3.6","depth":1,"previous":{"title":"Apach","level":"3.5","depth":1,"path":"Apach.md","ref":"Apach.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"VirtualHosting.md","mtime":"2022-08-22T08:12:41.839Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-23T02:15:59.114Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Virtual Hosting","level":"3.6","depth":1,"previous":{"title":"httpd.conf","level":"3.5","depth":1,"path":"Apach.md","ref":"Apach.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"VirtualHosting.md","mtime":"2022-08-23T03:02:24.016Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-23T03:03:30.420Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -339,10 +339,10 @@ EnableSendfile on
 
 #### 23. IncludeOptional 
 
-    - 설정파일 포함 
-    - 파일 미존재 시 에러 발생하지 않음
-    - conf.d/*.conf 파일을 포함 
----------------------
+설정파일 포함 
+파일 미존재 시 에러 발생하지 않음
+conf.d/*.conf 파일을 포함 
+
 ```plaintext
 IncludeOptional conf.d/*.conf
 ```
