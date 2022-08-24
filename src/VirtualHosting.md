@@ -16,14 +16,11 @@
 
 ```plaintext
 <VirtualHost *:80>
-
   ServerName vhosttest.com
   DocumentRoot /var/www/html/vhosttest.com
-
   <Directory /var/www/html/vhosttest.com>
     AllowOverride All
   </Directory>
-
 </VirtualHost>
 
 ```
