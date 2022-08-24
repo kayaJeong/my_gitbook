@@ -325,6 +325,12 @@ Listen 443
 <li>letsencrypt &#xC778;&#xC99D;&#xC11C; &#xC124;&#xCE58; </li>
 </ol>
 <p>Let&apos;s Encrypt &#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xBB34;&#xB8CC;&#xB85C; SSL/TLS &#xC778;&#xC99D;&#xC11C;&#xB97C; &#xBC1C;&#xAE09;&#xD574;&#xC8FC;&#xB294; &#xBE44;&#xC601;&#xB9AC;&#xAE30;&#xAD00;&#xC774;&#xBA70; &#xD55C;&#xBC88; &#xBC1C;&#xAE09; &#xBC1B;&#xC73C;&#xBA74; 90&#xC77C;&#xAC04; &#xC0AC;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xACE0; &#xB9CC;&#xB8CC; 30&#xC77C; &#xC804;&#xC5D0; &#xAC31;&#xC2E0;&#xC774; &#xAC00;&#xB2A5;</p>
+<ul>
+<li><p>&#xC124;&#xCE58;&#xC5D0; 5&#xBC88; &#xC774;&#xC0C1; &#xC2E4;&#xD328;&#xD558;&#xBA74; &#xD55C; &#xC2DC;&#xAC04; &#xB3D9;&#xC548; &#xB2E4;&#xC2DC; &#xC2DC;&#xB3C4;&#xD560; &#xC218; &#xC5C6;&#xC74C;</p>
+</li>
+<li><p>no space left on device &#xC624;&#xB958;</p>
+</li>
+</ul>
 <ol>
 <li>certbot &#xC124;&#xCE58; </li>
 </ol>
@@ -348,6 +354,10 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 <ol>
 <li>kayaho.ze.to &#xB3C4;&#xBA54;&#xC778;&#xC5D0; &#xC811;&#xC18D;&#xD574; &#xC778;&#xC99D;&#xC11C;&#xAC00; &#xBC1C;&#xAE09;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;!</li>
 </ol>
+<ol>
+<li>443&#xC5D0; &#xB300;&#xD55C; &#xAC00;&#xC0C1;&#xD638;&#xC2A4;&#xD2B8; &#xC124;&#xC815; &#xBC0F; &#xC778;&#xC99D;&#xC11C; &#xD30C;&#xC77C; &#xACBD;&#xB85C; &#xC9C0;&#xC815;</li>
+</ol>
+<h1 id="confdsslconf--">conf.d/ssl.conf  ?</h1>
 
                                 
                                 </section>
@@ -387,7 +397,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SSL & Letsencrypt","level":"3.7","depth":1,"previous":{"title":"Virtual Hosting","level":"3.6","depth":1,"path":"VirtualHosting.md","ref":"VirtualHosting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SSL.md","mtime":"2022-08-24T14:41:02.627Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T15:01:38.659Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SSL & Letsencrypt","level":"3.7","depth":1,"previous":{"title":"Virtual Hosting","level":"3.6","depth":1,"path":"VirtualHosting.md","ref":"VirtualHosting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SSL.md","mtime":"2022-08-24T15:01:56.678Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T15:07:07.687Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

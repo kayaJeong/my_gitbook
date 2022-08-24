@@ -291,14 +291,11 @@
 </ul>
 <h4 id="2-1--etchttpdconfhttpdconf-&#xC5D0;-virtualhost-&#xD0DC;&#xADF8;-&#xC0BD;&#xC785;">2-1.  /etc/httpd/conf/httpd.conf &#xC5D0; VirtualHost &#xD0DC;&#xADF8; &#xC0BD;&#xC785;</h4>
 <pre><code class="lang-plaintext">&lt;VirtualHost *:80&gt;
-
   ServerName vhosttest.com
   DocumentRoot /var/www/html/vhosttest.com
-
   &lt;Directory /var/www/html/vhosttest.com&gt;
     AllowOverride All
   &lt;/Directory&gt;
-
 &lt;/VirtualHost&gt;
 </code></pre>
 <h4 id="2-2-&#xC9C0;&#xC815;&#xD55C;-documentroot-&#xACBD;&#xB85C;-&#xC774;&#xB3D9;---&#xB514;&#xB809;&#xD1A0;&#xB9AC;-&#xC0DD;&#xC131;---html-&#xD30C;&#xC77C;-&#xC0DD;&#xC131;varwwwhtmlvhosttestcomindexhtml---&#xC544;&#xD30C;&#xCE58;-&#xC7AC;&#xC2DC;&#xC791;">2-2. &#xC9C0;&#xC815;&#xD55C; DocumentRoot &#xACBD;&#xB85C; &#xC774;&#xB3D9; -&gt; &#xB514;&#xB809;&#xD1A0;&#xB9AC; &#xC0DD;&#xC131; -&gt; html &#xD30C;&#xC77C; &#xC0DD;&#xC131;(/var/www/html/vhosttest.com/index.html) -&gt; &#xC544;&#xD30C;&#xCE58; &#xC7AC;&#xC2DC;&#xC791;</h4>
@@ -362,7 +359,7 @@ service httpd restart
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Virtual Hosting","level":"3.6","depth":1,"next":{"title":"SSL & Letsencrypt","level":"3.7","depth":1,"path":"SSL.md","ref":"SSL.md","articles":[]},"previous":{"title":"httpd.conf","level":"3.5","depth":1,"path":"Apach.md","ref":"Apach.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"VirtualHosting.md","mtime":"2022-08-23T04:10:05.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T15:01:38.659Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Virtual Hosting","level":"3.6","depth":1,"next":{"title":"SSL & Letsencrypt","level":"3.7","depth":1,"path":"SSL.md","ref":"SSL.md","articles":[]},"previous":{"title":"httpd.conf","level":"3.5","depth":1,"path":"Apach.md","ref":"Apach.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"VirtualHosting.md","mtime":"2022-08-24T15:01:56.678Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T15:07:07.687Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
