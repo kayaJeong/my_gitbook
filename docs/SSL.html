@@ -278,34 +278,22 @@
                                 
                                 <h1 id="ssl-&#xC124;&#xCE58;--&#xD658;&#xACBD;&#xC124;&#xC815;--letsencrypt-&#xC778;&#xC99D;&#xC11C;-&#xC124;&#xCE58;">SSL &#xC124;&#xCE58; &amp; &#xD658;&#xACBD;&#xC124;&#xC815; &amp; letsencrypt &#xC778;&#xC99D;&#xC11C; &#xC124;&#xCE58;</h1>
 <p><br></p>
-<ol>
-<li><p>/var/www/html/kayaho.ze.to &#xACBD;&#xB85C;&#xC5D0;  index.html&#xC744; &#xC0DD;&#xC131;</p>
-</li>
-<li><p>mod_ssl &#xC124;&#xCE58;</p>
-</li>
-</ol>
+<h4 id="0-varwwwhtmlkayahozeto-&#xACBD;&#xB85C;&#xC5D0;--indexhtml&#xC744;-&#xC0DD;&#xC131;">0. /var/www/html/kayaho.ze.to &#xACBD;&#xB85C;&#xC5D0;  index.html&#xC744; &#xC0DD;&#xC131;</h4>
+<h4 id="1-modssl-&#xC124;&#xCE58;">1. mod_ssl &#xC124;&#xCE58;</h4>
 <pre><code class="lang-plaintext">yum update -y
 
 yum install mod_ssl
 </code></pre>
-<ol>
-<li>&#xC124;&#xCE58; &#xD655;&#xC778;</li>
-</ol>
+<h4 id="2-&#xC124;&#xCE58;-&#xD655;&#xC778;">2. &#xC124;&#xCE58; &#xD655;&#xC778;</h4>
 <pre><code class="lang-plaintext">ll /etc/httpd/modules/mod_ssl.so
 </code></pre>
-<ol>
-<li><p>&#xC544;&#xD30C;&#xCE58; &#xC11C;&#xBE44;&#xC2A4; &#xC7AC;&#xC2DC;&#xC791;</p>
+<h4 id="3-&#xC544;&#xD30C;&#xCE58;-&#xC11C;&#xBE44;&#xC2A4;-&#xC7AC;&#xC2DC;&#xC791;">3. &#xC544;&#xD30C;&#xCE58; &#xC11C;&#xBE44;&#xC2A4; &#xC7AC;&#xC2DC;&#xC791;</h4>
 <pre><code class="lang-plaintext">service httpd restart
 </code></pre>
-</li>
-<li><p>&#xC815;&#xC0C1; &#xAD6C;&#xB3D9; &#xC644;&#xB8CC; &#xC2DC; 443 &#xD3EC;&#xD2B8; &#xC5F4;&#xB838;&#xB294;&#xC9C0; &#xD655;&#xC778; </p>
-</li>
-</ol>
+<h4 id="4-&#xC815;&#xC0C1;-&#xAD6C;&#xB3D9;-&#xC644;&#xB8CC;-&#xC2DC;-443-&#xD3EC;&#xD2B8;-&#xC5F4;&#xB838;&#xB294;&#xC9C0;-&#xD655;&#xC778;">4. &#xC815;&#xC0C1; &#xAD6C;&#xB3D9; &#xC644;&#xB8CC; &#xC2DC; 443 &#xD3EC;&#xD2B8; &#xC5F4;&#xB838;&#xB294;&#xC9C0; &#xD655;&#xC778;</h4>
 <pre><code class="lang-plaintext">netstat -anlp | grep 443
 </code></pre>
-<ol>
-<li>vi /etc/httpd/conf/httpd.conf &#xC5D0;&#xC11C; &#xC124;&#xC815; </li>
-</ol>
+<h4 id="5-vi-etchttpdconfhttpdconf-&#xC5D0;&#xC11C;-&#xC124;&#xC815;">5. vi /etc/httpd/conf/httpd.conf &#xC5D0;&#xC11C; &#xC124;&#xC815;</h4>
 <pre><code class="lang-plaintext">
 Listen 443
 
@@ -315,15 +303,12 @@ Listen 443
     ServerAlias www.kayaho.ze.to
 &lt;/VirtualHost&gt;
 </code></pre>
-<ol>
-<li>&#xC544;&#xD30C;&#xCE58; &#xC7AC;&#xC2DC;&#xC791;<pre><code class="lang-plaintext">apachctl restart
+<h4 id="6-&#xC544;&#xD30C;&#xCE58;-&#xC7AC;&#xC2DC;&#xC791;">6. &#xC544;&#xD30C;&#xCE58; &#xC7AC;&#xC2DC;&#xC791;</h4>
+<pre><code class="lang-plaintext">apachctl restart
 </code></pre>
-<br></li>
-</ol>
+<p><br></p>
 <h1 id="letsencrypt">letsencrypt</h1>
-<ol>
-<li>letsencrypt &#xC778;&#xC99D;&#xC11C; &#xC124;&#xCE58; </li>
-</ol>
+<h4 id="7-letsencrypt-&#xC778;&#xC99D;&#xC11C;-&#xC124;&#xCE58;">7. letsencrypt &#xC778;&#xC99D;&#xC11C; &#xC124;&#xCE58;</h4>
 <p>Let&apos;s Encrypt &#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xC5D0;&#xAC8C; &#xBB34;&#xB8CC;&#xB85C; SSL/TLS &#xC778;&#xC99D;&#xC11C;&#xB97C; &#xBC1C;&#xAE09;&#xD574;&#xC8FC;&#xB294; &#xBE44;&#xC601;&#xB9AC;&#xAE30;&#xAD00;&#xC774;&#xBA70; &#xD55C;&#xBC88; &#xBC1C;&#xAE09; &#xBC1B;&#xC73C;&#xBA74; 90&#xC77C;&#xAC04; &#xC0AC;&#xC6A9;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xACE0; &#xB9CC;&#xB8CC; 30&#xC77C; &#xC804;&#xC5D0; &#xAC31;&#xC2E0;&#xC774; &#xAC00;&#xB2A5;</p>
 <ul>
 <li><p>&#xC124;&#xCE58;&#xC5D0; 5&#xBC88; &#xC774;&#xC0C1; &#xC2E4;&#xD328;&#xD558;&#xBA74; &#xD55C; &#xC2DC;&#xAC04; &#xB3D9;&#xC548; &#xB2E4;&#xC2DC; &#xC2DC;&#xB3C4;&#xD560; &#xC218; &#xC5C6;&#xC74C;</p>
@@ -331,16 +316,12 @@ Listen 443
 <li><p>no space left on device &#xC624;&#xB958;</p>
 </li>
 </ul>
-<ol>
-<li>certbot &#xC124;&#xCE58; </li>
-</ol>
+<h4 id="8--certbot-&#xC124;&#xCE58;">8.  certbot &#xC124;&#xCE58;</h4>
 <pre><code class="lang-plaintext">yum install certbot python2-certbot-apache
 
 certbot --webroot --installer apache -w /var/www/html/kayaho.ze.to -d kayaho.ze.to
 </code></pre>
-<ol>
-<li>&#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xB0B4;&#xC6A9;&#xC774; &#xCD94;&#xAC00;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xB294;&#xC9C0; &#xD655;&#xC778;   vi /etc/httpd/conf/httpd.conf </li>
-</ol>
+<h4 id="9-&#xC544;&#xB798;&#xC640;-&#xAC19;&#xC740;-&#xB0B4;&#xC6A9;&#xC774;-&#xCD94;&#xAC00;&#xC801;&#xC73C;&#xB85C;-&#xC0DD;&#xC131;&#xB418;&#xB294;&#xC9C0;-&#xD655;&#xC778;---vi-etchttpdconfhttpdconf">9. &#xC544;&#xB798;&#xC640; &#xAC19;&#xC740; &#xB0B4;&#xC6A9;&#xC774; &#xCD94;&#xAC00;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xB294;&#xC9C0; &#xD655;&#xC778;   vi /etc/httpd/conf/httpd.conf</h4>
 <pre><code class="lang-plaintext">&lt;VirtualHost *:80&gt;
     ServerName kayaho.ze.to
     DocumentRoot /var/www/html/kayaho.ze.to
@@ -351,12 +332,8 @@ RewriteCond %{SERVER_NAME} =www.kayaho.ze.to
 RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
 &lt;/VirtualHost&gt;
 </code></pre>
-<ol>
-<li>kayaho.ze.to &#xB3C4;&#xBA54;&#xC778;&#xC5D0; &#xC811;&#xC18D;&#xD574; &#xC778;&#xC99D;&#xC11C;&#xAC00; &#xBC1C;&#xAE09;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;!</li>
-</ol>
-<ol>
-<li>443&#xC5D0; &#xB300;&#xD55C; &#xAC00;&#xC0C1;&#xD638;&#xC2A4;&#xD2B8; &#xC124;&#xC815; &#xBC0F; &#xC778;&#xC99D;&#xC11C; &#xD30C;&#xC77C; &#xACBD;&#xB85C; &#xC9C0;&#xC815;</li>
-</ol>
+<h4 id="10-kayahozeto-&#xB3C4;&#xBA54;&#xC778;&#xC5D0;-&#xC811;&#xC18D;&#xD574;-&#xC778;&#xC99D;&#xC11C;&#xAC00;-&#xBC1C;&#xAE09;&#xB418;&#xC5C8;&#xB294;&#xC9C0;-&#xD655;&#xC778;">10. kayaho.ze.to &#xB3C4;&#xBA54;&#xC778;&#xC5D0; &#xC811;&#xC18D;&#xD574; &#xC778;&#xC99D;&#xC11C;&#xAC00; &#xBC1C;&#xAE09;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;!!!</h4>
+<h4 id="11-443&#xC5D0;-&#xB300;&#xD55C;-&#xAC00;&#xC0C1;&#xD638;&#xC2A4;&#xD2B8;-&#xC124;&#xC815;-&#xBC0F;-&#xC778;&#xC99D;&#xC11C;-&#xD30C;&#xC77C;-&#xACBD;&#xB85C;-&#xC9C0;&#xC815;">11. 443&#xC5D0; &#xB300;&#xD55C; &#xAC00;&#xC0C1;&#xD638;&#xC2A4;&#xD2B8; &#xC124;&#xC815; &#xBC0F; &#xC778;&#xC99D;&#xC11C; &#xD30C;&#xC77C; &#xACBD;&#xB85C; &#xC9C0;&#xC815;</h4>
 <h1 id="confdsslconf--">conf.d/ssl.conf  ?</h1>
 
                                 
@@ -397,7 +374,7 @@ RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SSL & Letsencrypt","level":"3.7","depth":1,"previous":{"title":"Virtual Hosting","level":"3.6","depth":1,"path":"VirtualHosting.md","ref":"VirtualHosting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SSL.md","mtime":"2022-08-24T15:01:56.678Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T15:09:16.156Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SSL & Letsencrypt","level":"3.7","depth":1,"previous":{"title":"Virtual Hosting","level":"3.6","depth":1,"path":"VirtualHosting.md","ref":"VirtualHosting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"SSL.md","mtime":"2022-08-24T15:12:39.334Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-24T15:12:48.308Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
